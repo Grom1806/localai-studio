@@ -1,0 +1,7 @@
+# env-qwen (Qwen3-TTS). Not frozen: resolved at install time on top of torch 2.14 + CUDA 13.0.
+# qwen-tts pins transformers 4.57.x, which conflicts with the other voice engines -> separate env.
+qwen-tts
+fastapi
+uvicorn[standard]
+soundfile
+python-multipart

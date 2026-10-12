@@ -1,0 +1,4 @@
+# Exact package set of env-face-blur, frozen from a working install (Windows 11, RTX 5080, 2026-10).
+# Installed with: uv pip install --no-deps -r <this file> (see install.ps1).
+numpy==2.4.6
+opencv-python-headless==5.0.0.93

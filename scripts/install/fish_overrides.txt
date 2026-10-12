@@ -1,0 +1,5 @@
+torch==2.8.0
+torchaudio==2.8.0
+protobuf>=3.20.0,<6.0.0
+pyaudio; sys_platform == 'linux'
+tensorboard<2.21

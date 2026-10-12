@@ -1,0 +1,331 @@
+{
+    "models":  [
+                   {
+                       "group":  "image",
+                       "repo":  "Comfy-Org/z_image_turbo",
+                       "file":  "split_files/diffusion_models/z_image_turbo_bf16.safetensors",
+                       "dest":  "image/diffusion_models",
+                       "size_gb":  12.31
+                   },
+                   {
+                       "group":  "image",
+                       "repo":  "Comfy-Org/z_image_turbo",
+                       "file":  "split_files/text_encoders/qwen_3_4b.safetensors",
+                       "dest":  "shared/text_encoders",
+                       "size_gb":  8.04
+                   },
+                   {
+                       "group":  "image",
+                       "repo":  "Comfy-Org/z_image_turbo",
+                       "file":  "split_files/vae/ae.safetensors",
+                       "dest":  "image/vae",
+                       "size_gb":  0.34
+                   },
+                   {
+                       "group":  "image",
+                       "repo":  "Comfy-Org/flux2-klein",
+                       "file":  "split_files/diffusion_models/flux-2-klein-4b.safetensors",
+                       "dest":  "image/diffusion_models",
+                       "size_gb":  7.75
+                   },
+                   {
+                       "group":  "image",
+                       "repo":  "Comfy-Org/flux2-klein",
+                       "file":  "split_files/vae/flux2-vae.safetensors",
+                       "dest":  "image/vae",
+                       "size_gb":  0.34
+                   },
+                   {
+                       "group":  "image",
+                       "url":  "https://github.com/xinntao/Real-ESRGAN/releases/download/v0.1.0/RealESRGAN_x4plus.pth",
+                       "dest":  "image/upscale_models"
+                   },
+                   {
+                       "group":  "tts",
+                       "snapshot":  true,
+                       "repo":  "ResembleAI/chatterbox",
+                       "dest":  "tts/chatterbox",
+                       "allow":  [
+                                     "ve.pt",
+                                     "s3gen.pt",
+                                     "t3_mtl23ls_v3.safetensors",
+                                     "*.json",
+                                     "conds.pt"
+                                 ]
+                   },
+                   {
+                       "group":  "tts",
+                       "snapshot":  true,
+                       "repo":  "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+                       "dest":  "tts/qwen3-tts-1.7b-base"
+                   },
+                   {
+                       "group":  "tts",
+                       "snapshot":  true,
+                       "repo":  "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+                       "dest":  "tts/qwen3-tts-1.7b-customvoice"
+                   },
+                   {
+                       "group":  "tts",
+                       "snapshot":  true,
+                       "repo":  "k2-fsa/OmniVoice",
+                       "dest":  "tts/omnivoice"
+                   },
+                   {
+                       "dest":  "video/diffusion_models",
+                       "group":  "video",
+                       "size_gb":  18.72,
+                       "repo":  "Lightricks/LTX-2.5",
+                       "file":  "diffusion_models/ltx-2.5-22b-distilled-transformer-nvfp4.safetensors"
+                   },
+                   {
+                       "dest":  "video/text_encoders",
+                       "group":  "video",
+                       "size_gb":  15.37,
+                       "repo":  "Lightricks/LTX-2.5",
+                       "file":  "text_encoders/gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors"
+                   },
+                   {
+                       "dest":  "video/vae",
+                       "group":  "video",
+                       "size_gb":  1.45,
+                       "repo":  "Lightricks/LTX-2.5",
+                       "file":  "vae/ltx-2.5-video-vae-conv-bf16.safetensors"
+                   },
+                   {
+                       "dest":  "video/vae",
+                       "group":  "video",
+                       "size_gb":  0.37,
+                       "repo":  "Lightricks/LTX-2.5",
+                       "file":  "vae/ltx-2.5-audio-vae-bf16.safetensors"
+                   },
+                   {
+                       "dest":  "video/latent_upscale_models",
+                       "group":  "video",
+                       "size_gb":  1,
+                       "repo":  "Lightricks/LTX-2.5",
+                       "file":  "latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors"
+                   },
+                   {
+                       "dest":  "video/model_patches",
+                       "group":  "video",
+                       "repo":  "Lightricks/LTX-2.5",
+                       "file":  "model_patches/ltx-2.5-duration-head-bf16.safetensors"
+                   },
+                   {
+                       "group":  "asr",
+                       "snapshot":  true,
+                       "repo":  "openai/whisper-large-v3-turbo",
+                       "dest":  "tts/whisper-large-v3-turbo",
+                       "allow":  [
+                                     "*.json",
+                                     "*.safetensors",
+                                     "*.txt",
+                                     "merges.txt",
+                                     "vocab.json"
+                                 ]
+                   },
+                   {
+                       "group":  "tools",
+                       "repo":  "Comfy-Org/SeedVR2",
+                       "file":  "diffusion_models/seedvr2_7b_int8_convrot.safetensors",
+                       "dest":  "tools/diffusion_models",
+                       "size_gb":  8.33
+                   },
+                   {
+                       "group":  "tools",
+                       "repo":  "Comfy-Org/SeedVR2",
+                       "file":  "vae/seedvr2_ema_vae_fp16.safetensors",
+                       "dest":  "tools/vae",
+                       "size_gb":  0.5
+                   },
+                   {
+                       "group":  "tools",
+                       "repo":  "Comfy-Org/frame_interpolation",
+                       "file":  "frame_interpolation/rife_v4.25_heavy.safetensors",
+                       "dest":  "tools/frame_interpolation",
+                       "size_gb":  0.09
+                   },
+                   {
+                       "group":  "tools",
+                       "repo":  "Comfy-Org/BiRefNet",
+                       "file":  "background_removal/birefnet.safetensors",
+                       "dest":  "tools/background_removal",
+                       "size_gb":  0.44
+                   },
+                   {
+                       "group":  "qwen21",
+                       "repo":  "Comfy-Org/Qwen-Image-2.1",
+                       "file":  "diffusion_models/qwen_image_2.1_int8_convrot.safetensors",
+                       "dest":  "image/diffusion_models",
+                       "size_gb":  7.26
+                   },
+                   {
+                       "group":  "qwen21",
+                       "repo":  "Comfy-Org/Qwen-Image-2.1",
+                       "file":  "text_encoders/qwen3vl_8b_int8_convrot.safetensors",
+                       "dest":  "shared/text_encoders",
+                       "size_gb":  9.35
+                   },
+                   {
+                       "group":  "qwen21",
+                       "repo":  "Comfy-Org/Qwen-Image-2.1",
+                       "file":  "vae/qwen_image_2.1_vae_bf16.safetensors",
+                       "dest":  "image/vae",
+                       "size_gb":  0.68
+                   },
+                   {
+                       "group":  "bernini",
+                       "repo":  "Comfy-Org/Bernini-R",
+                       "file":  "diffusion_models/wan2.2_bernini_r_high_noise_fp8_scaled.safetensors",
+                       "dest":  "video/diffusion_models",
+                       "size_gb":  15.57
+                   },
+                   {
+                       "group":  "bernini",
+                       "repo":  "Comfy-Org/Bernini-R",
+                       "file":  "diffusion_models/wan2.2_bernini_r_low_noise_fp8_scaled.safetensors",
+                       "dest":  "video/diffusion_models",
+                       "size_gb":  15.57
+                   },
+                   {
+                       "group":  "bernini",
+                       "repo":  "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+                       "file":  "split_files/text_encoders/umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+                       "dest":  "video/text_encoders",
+                       "size_gb":  6.74
+                   },
+                   {
+                       "group":  "bernini",
+                       "repo":  "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+                       "file":  "split_files/vae/wan_2.1_vae.safetensors",
+                       "dest":  "video/vae",
+                       "size_gb":  0.25
+                   },
+                   {
+                       "group":  "bernini",
+                       "repo":  "Kijai/WanVideo_comfy",
+                       "file":  "Lightx2v/lightx2v_T2V_14B_cfg_step_distill_v2_lora_rank64_bf16.safetensors",
+                       "dest":  "video/loras",
+                       "size_gb":  0.63
+                   },
+                   {
+                       "group":  "vace",
+                       "repo":  "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+                       "file":  "split_files/diffusion_models/wan2.1_vace_1.3B_fp16.safetensors",
+                       "dest":  "video/diffusion_models",
+                       "size_gb":  4.31
+                   },
+                   {
+                       "group":  "llm",
+                       "repo":  "google/gemma-4-12B-it-qat-q4_0-gguf",
+                       "file":  "gemma-4-12b-it-qat-q4_0.gguf",
+                       "dest":  "llm",
+                       "size_gb":  6.98
+                   },
+                   {
+                       "group":  "llm",
+                       "repo":  "google/gemma-4-12B-it-qat-q4_0-gguf",
+                       "file":  "mmproj-gemma-4-12b-it-qat-q4_0.gguf",
+                       "dest":  "llm",
+                       "size_gb":  0.18
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/diffusion_models/hunyuanvideo1.5_480p_t2v_cfg_distilled_fp8_scaled.safetensors",
+                       "dest":  "video/diffusion_models",
+                       "size_gb":  8.33
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/diffusion_models/hunyuanvideo1.5_480p_i2v_step_distilled_fp8_scaled.safetensors",
+                       "dest":  "video/diffusion_models",
+                       "size_gb":  8.34
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/diffusion_models/hunyuanvideo1.5_720p_sr_distilled_fp8_scaled.safetensors",
+                       "dest":  "video/diffusion_models",
+                       "size_gb":  8.34
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/text_encoders/qwen_2.5_vl_7b_fp8_scaled.safetensors",
+                       "dest":  "video/text_encoders",
+                       "size_gb":  9.38
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/text_encoders/byt5_small_glyphxl_fp16.safetensors",
+                       "dest":  "video/text_encoders",
+                       "size_gb":  0.44
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/vae/hunyuanvideo15_vae_fp16.safetensors",
+                       "dest":  "video/vae",
+                       "size_gb":  2.52
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/clip_vision/sigclip_vision_patch14_384.safetensors",
+                       "dest":  "video/clip_vision",
+                       "size_gb":  0.86
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/latent_upscale_models/hunyuanvideo15_latent_upsampler_720p.safetensors",
+                       "dest":  "video/latent_upscale_models",
+                       "size_gb":  0.09
+                   },
+                   {
+                       "group":  "hunyuan15",
+                       "repo":  "Comfy-Org/HunyuanVideo_1.5_repackaged",
+                       "file":  "split_files/loras/hunyuanvideo1.5_t2v_480p_lightx2v_4step_lora_rank_32_bf16.safetensors",
+                       "dest":  "video/loras",
+                       "size_gb":  0.34
+                   },
+                   {
+                       "group":  "infinitetalk",
+                       "repo":  "Kijai/WanVideo_comfy_fp8_scaled",
+                       "file":  "I2V/Wan2_1-I2V-14B-480p_fp8_e4m3fn_scaled_KJ.safetensors",
+                       "dest":  "video/diffusion_models",
+                       "size_gb":  16.64
+                   },
+                   {
+                       "group":  "infinitetalk",
+                       "repo":  "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
+                       "file":  "split_files/model_patches/wan2.1_infiniteTalk_multi_fp16.safetensors",
+                       "dest":  "video/model_patches",
+                       "size_gb":  5.12
+                   },
+                   {
+                       "group":  "infinitetalk",
+                       "repo":  "Kijai/wav2vec2_safetensors",
+                       "file":  "wav2vec2-chinese-base_fp16.safetensors",
+                       "dest":  "video/audio_encoders",
+                       "size_gb":  0.19
+                   },
+                   {
+                       "group":  "infinitetalk",
+                       "repo":  "Kijai/WanVideo_comfy",
+                       "file":  "Lightx2v/lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+                       "dest":  "video/loras",
+                       "size_gb":  0.74
+                   },
+                   {
+                       "group":  "fish",
+                       "snapshot":  true,
+                       "repo":  "fishaudio/s2-pro",
+                       "dest":  "tts/fish-s2-pro"
+                   }
+               ]
+}

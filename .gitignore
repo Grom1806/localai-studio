@@ -1,0 +1,31 @@
+# ---- Big / machine-specific: recreated by install.ps1 -------------------------------------------
+/envs/
+/apps/
+/models/
+/cache/
+/temp/
+
+# ---- Your own data: never committed ------------------------------------------------------------
+/outputs/
+/data/
+/logs/
+/config/settings.json
+/config/youtube_oauth_client.json
+/voices/*
+!/voices/default_ru_female.wav
+!/voices/default_ru_male.wav
+!/voices/default_voices.json
+
+# ---- Build output / tooling --------------------------------------------------------------------
+/ui/node_modules/
+/ui/dist/
+/ui/tsconfig.tsbuildinfo
+__pycache__/
+*.pyc
+*.log
+*.bak*
+.env
+.venv/
+
+# ---- Internal working notes --------------------------------------------------------------------
+/docs/VIDEO_EDITOR_AI_AUDIT.md

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>LocalAI Studio – starting</title>
+<link rel="icon" href="localai.png">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; height: 100vh; display: grid; place-items: center; background: #0a0b0f; color: #eceef3;
+         font: 15px "Segoe UI", system-ui, sans-serif; }
+  .box { text-align: center; }
+  img { width: 96px; height: 96px; filter: drop-shadow(0 8px 30px rgba(139,108,255,.45)); animation: pulse 1.6s ease-in-out infinite; }
+  h1 { font-size: 22px; font-weight: 600; margin: 22px 0 6px; }
+  p { color: #8a90a0; margin: 0; }
+  .bar { width: 260px; height: 4px; background: #20242e; border-radius: 9px; overflow: hidden; margin: 22px auto 0; }
+  .bar div { width: 40%; height: 100%; background: linear-gradient(90deg,#8b6cff,#5b8cff); border-radius: 9px; animation: slide 1.3s ease-in-out infinite; }
+  @keyframes pulse { 50% { transform: scale(1.06); } }
+  @keyframes slide { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
+</style>
+</head>
+<body>
+<div class="box">
+  <img src="localai.png" alt="">
+  <h1>LocalAI Studio is starting…</h1>
+  <p id="msg">Loading the AI backends on your GPU. This takes about 30 seconds.</p>
+  <div class="bar"><div></div></div>
+</div>
+<script>
+  // Poll the local server; switch to the app as soon as it answers.
+  const target = "http://localhost:3000/";
+  let tries = 0;
+  async function check() {
+    tries++;
+    try {
+      await fetch("http://127.0.0.1:3000/api/health", { mode: "no-cors", cache: "no-store" });
+      location.replace(target);
+      return;
+    } catch (e) { /* not up yet */ }
+    if (tries === 90) document.getElementById("msg").textContent =
+      "Still starting… if this takes more than 3 minutes, check C:\\LocalAI\\logs\\api.log";
+    setTimeout(check, 1000);
+  }
+  check();
+</script>
+</body>
+</html>

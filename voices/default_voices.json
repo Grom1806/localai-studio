@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Default female (RU)",
+    "ref_path": "voices/default_ru_female.wav",
+    "language": "ru",
+    "transcript": "Добрый день. Меня зовут Мария. Я расскажу вам всё по порядку, спокойно и понятно.",
+    "notes": "Synthetic voice (OmniVoice voice design). Used for 'Default AI voice'."
+  },
+  {
+    "name": "Default male (RU)",
+    "ref_path": "voices/default_ru_male.wav",
+    "language": "ru",
+    "transcript": "Крыша покрывалась наметенным снегом. Растения стояли и слушали вой ветра и вспоминали иной ветер.",
+    "notes": "Public-domain LibriVox narrator. Used for 'Default AI voice'."
+  }
+]

@@ -1,0 +1,165 @@
+{
+    "image":  {
+                  "fast":  {
+                               "label":  "Fast",
+                               "model":  "z_image_turbo",
+                               "width":  1024,
+                               "height":  1024,
+                               "steps":  6,
+                               "cfg":  1.0,
+                               "upscale":  false,
+                               "note":  "~4 s per image"
+                           },
+                  "balanced":  {
+                                   "label":  "Balanced",
+                                   "model":  "z_image_turbo",
+                                   "width":  1024,
+                                   "height":  1024,
+                                   "steps":  8,
+                                   "cfg":  1.0,
+                                   "upscale":  false,
+                                   "note":  "official Turbo settings, ~5 s"
+                               },
+                  "quality":  {
+                                  "label":  "Max Quality",
+                                  "model":  "z_image_turbo",
+                                  "width":  1024,
+                                  "height":  1024,
+                                  "steps":  10,
+                                  "cfg":  1.0,
+                                  "upscale":  true,
+                                  "upscale_factor":  2.0,
+                                  "detail":  0.3,
+                                  "note":  "2048 px output with detail pass, ~40 s"
+                              }
+              },
+    "image_models":  {
+                         "flux2_klein_4b":  {
+                                                "steps":  4,
+                                                "cfg":  1.0
+                                            }
+                     },
+    "video":  {
+                  "preview":  {
+                                  "label":  "Preview",
+                                  "width":  768,
+                                  "height":  448,
+                                  "duration":  4,
+                                  "fps":  24,
+                                  "two_stage":  false,
+                                  "audio":  true,
+                                  "note":  "single pass, quick look"
+                              },
+                  "balanced":  {
+                                   "label":  "Balanced",
+                                   "width":  1024,
+                                   "height":  576,
+                                   "duration":  5,
+                                   "fps":  24,
+                                   "two_stage":  true,
+                                   "audio":  true,
+                                   "note":  "2-stage with x2 latent upscale"
+                               },
+                  "quality":  {
+                                  "label":  "Quality",
+                                  "width":  1280,
+                                  "height":  704,
+                                  "duration":  5,
+                                  "fps":  24,
+                                  "two_stage":  true,
+                                  "audio":  true,
+                                  "note":  "720p, slower"
+                              }
+              },
+    "voice":  {
+                  "fast":  {
+                               "label":  "Fast",
+                               "chatterbox":  {
+                                                  "cfg_weight":  0.5,
+                                                  "temperature":  0.7
+                                              },
+                               "omnivoice":  {
+                                                 "num_step":  16
+                                             },
+                               "qwen":  {
+
+                                        }
+                           },
+                  "natural":  {
+                                  "label":  "Natural",
+                                  "chatterbox":  {
+                                                     "cfg_weight":  0.5,
+                                                     "temperature":  0.8
+                                                 },
+                                  "omnivoice":  {
+                                                    "num_step":  32
+                                                },
+                                  "qwen":  {
+
+                                           }
+                              },
+                  "max":  {
+                              "label":  "Maximum Quality",
+                              "chatterbox":  {
+                                                 "cfg_weight":  0.4,
+                                                 "temperature":  0.8,
+                                                 "exaggeration":  0.55
+                                             },
+                              "omnivoice":  {
+                                                "num_step":  48
+                                            },
+                              "qwen":  {
+                                           "temperature":  0.8
+                                       }
+                          }
+              },
+    "vram_estimates_gb":  {
+                              "image:z_image_turbo":  13.0,
+                              "image:flux2_klein_4b":  9.5,
+                              "video:ltx25":  15.0,
+                              "voice:chatterbox":  4.0,
+                              "voice:qwen":  6.0,
+                              "voice:omnivoice":  4.5,
+                              "image:qwen_image_21":  14,
+                              "tool:seedvr2":  12,
+                                "tool:esrgan":  3,
+                                  "tool:rife":  2,
+                                  "tool:sam2":  5.5,
+                                "tool:birefnet":  2,
+                                "llm:gemma4":  12.0,
+      "video:bernini":  15.5,
+    "video:vace":  11.0
+                          },
+    "image_edit":  {
+                       "fast":  {
+                                    "label":  "Fast",
+                                    "steps":  12
+                                },
+                       "balanced":  {
+                                        "label":  "Balanced",
+                                        "steps":  20
+                                    },
+                       "quality":  {
+                                       "label":  "Quality",
+                                       "steps":  30
+                                   }
+                   },
+    "video_edit":  {
+                       "fast":  {
+                                    "label":  "Fast",
+                                    "max_size":  640,
+                                    "duration":  3
+                                },
+                       "balanced":  {
+                                        "label":  "Balanced",
+                                        "max_size":  832,
+                                        "duration":  5
+                                    },
+                       "quality":  {
+                                       "label":  "Quality",
+                                       "max_size":  832,
+                                       "duration":  5,
+                                       "turbo":  false
+                                   }
+                   }
+}

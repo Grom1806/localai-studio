@@ -1,0 +1,7 @@
+{
+  "_comment": "Measured TTS ranking per language (scripts/tests/ru_bench_*.py). 'Auto' voice engine = first installed engine in the list.",
+  "_ru_2026-09-26": "18 sentences, same reference. qwen: UTMOS 3.05, CER 0.5%, sim 0.664, RTF 1.16 | omnivoice: 2.54, 0.3%, 0.733, 0.32 | chatterbox: 2.67, 0.7%, 0.672, 0.64 | fish: 2.93, 0.3%, 0.640, RTF 23.8 (16 GB VRAM, too slow for Auto)",
+  "ru": ["qwen", "omnivoice", "chatterbox", "fish"],
+  "en": ["chatterbox", "qwen", "omnivoice"],
+  "de": ["chatterbox", "qwen", "omnivoice"]
+}

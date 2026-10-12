@@ -1,0 +1,15 @@
+# Windows scripts must keep CRLF line endings (cmd.exe misreads LF-only .bat/.cmd files).
+*.bat  text eol=crlf
+*.cmd  text eol=crlf
+*.ps1  text eol=crlf
+*.vbs  text eol=crlf
+
+*.py   text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+
+*.wav  binary
+*.png  binary
+*.ico  binary

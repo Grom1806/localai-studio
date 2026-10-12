@@ -1,0 +1,32 @@
+# ComfyUI reads all models from C:\LocalAI\models (no copies inside apps\ComfyUI).
+# Text encoders shared by several image models live in models\shared.
+localai:
+  base_path: C:/LocalAI/models
+  is_default: true
+  diffusion_models: |
+    image/diffusion_models
+    video/diffusion_models
+    tools/diffusion_models
+  checkpoints: |
+    image/checkpoints
+    video/checkpoints
+  text_encoders: |
+    shared/text_encoders
+    video/text_encoders
+  vae: |
+    image/vae
+    video/vae
+    tools/vae
+  loras: |
+    image/loras
+    video/loras
+  upscale_models: image/upscale_models
+  latent_upscale_models: video/latent_upscale_models
+  controlnet: image/controlnet
+  clip_vision: video/clip_vision
+  audio_encoders: video/audio_encoders
+  frame_interpolation: tools/frame_interpolation
+  background_removal: tools/background_removal
+  model_patches: |
+    image/model_patches
+    video/model_patches
