@@ -61,7 +61,7 @@ powershell -ExecutionPolicy Bypass -File C:\LocalAI\install.ps1 -CheckOnly
 ## 🚀 Установка
 
 ```bash
-git clone https://github.com/<owner>/localai-studio.git C:\LocalAI
+git clone https://github.com/Grom1806/localai-studio.git C:\LocalAI
 ```
 
 1. Дважды щёлкните **`C:\LocalAI\Install-LocalAI.bat`**. Установщик проверит ПК, поставит всё нужное в `C:\LocalAI`

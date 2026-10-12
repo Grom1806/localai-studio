@@ -8,7 +8,7 @@ problem we already ran into, and stop to ask you before anything large or risky.
 
 1. Clone the repository to exactly `C:\LocalAI`:
    ```bash
-   git clone https://github.com/<owner>/localai-studio.git C:\LocalAI
+   git clone https://github.com/Grom1806/localai-studio.git C:\LocalAI
    ```
 2. Open your AI agent **in the folder `C:\LocalAI`** (for Claude Code: open a terminal there and run `claude`).
 3. Copy everything inside the box below and send it as your first message.

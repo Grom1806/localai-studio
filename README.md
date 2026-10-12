@@ -74,7 +74,7 @@ powershell -ExecutionPolicy Bypass -File C:\LocalAI\install.ps1 -CheckOnly
 ## 🚀 Quick start
 
 ```bash
-git clone https://github.com/<owner>/localai-studio.git C:\LocalAI
+git clone https://github.com/Grom1806/localai-studio.git C:\LocalAI
 ```
 
 1. Double-click **`C:\LocalAI\Install-LocalAI.bat`**
